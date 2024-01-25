@@ -1,0 +1,2 @@
+@MBelangerB:registry=https://npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+@Bedy90:registry=https://npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}

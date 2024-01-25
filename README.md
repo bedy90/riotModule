@@ -51,6 +51,8 @@ If this is a brand new project, make sure to create a package.json first with th
 Require PAT *(Personal access token)* for install the package
 ```bash
 npm login --scope=@mbelangerb --auth-type=legacy --registry=https://npm.pkg.github.com
+
+npm login --scope=@bedy90 --registry=https://npm.pkg.github.com
 ```
 
 Installation is done using the **npm install** command:
