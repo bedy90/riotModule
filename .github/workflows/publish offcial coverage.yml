@@ -42,11 +42,16 @@
           uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.node-version }}
+            registry-url: https://npm.pkg.github.com
+            scope: '@bedy90' # This is the real owner name in the actual file.
+            # registry-url: https://registry.npmjs.org/
             
         - name: Install Typescript
           run: npm install typescript@5.3.3 -g
           
         - name: Install dependencies
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run: npm ci
     
         - name: Run Test Coverage
