@@ -108,5 +108,6 @@ dist
 .tern-port
 
 build/
-.npmrc
+# .npmrc
+.npmrc2
 copy.bat    

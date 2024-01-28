@@ -19,6 +19,7 @@
 
     env:
         Riot_APIDevKey: ${{ secrets.RIOT_APIDEVKEY }}
+        # NODE_AUTH_TOKEN: ${{ secrets.PWA_TOKEN }}
         CacheEnabled: true
     
     permissions:
