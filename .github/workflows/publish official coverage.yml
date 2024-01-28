@@ -43,9 +43,9 @@
           uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.node-version }}
-            registry-url: https://npm.pkg.github.com
             # Defaults to the user or organization that owns the workflow file
-            scope: '@bedy90' # This is the real owner name in the actual file.
+            registry-url: https://npm.pkg.github.com
+            scope: '@bedy90'
             
         - name: Install Typescript
           run: npm install typescript@5.3.3 -g

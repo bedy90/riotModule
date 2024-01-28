@@ -11,6 +11,7 @@ on:
 
 env:
   Riot_APIDevKey: ${{ secrets.RIOT_APIDEVKEY }}
+  NODE_AUTH_TOKEN: ${{ secrets.PWA_TOKEN }}
   CacheEnabled: true
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -44,6 +45,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        # Defaults to the user or organization that owns the workflow file
+        registry-url: https://npm.pkg.github.com/
+        scope: '@bedy90'
         
     - name: Install Typescript
       run: npm install typescript@5.3.3 -g
