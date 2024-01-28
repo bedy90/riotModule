@@ -43,16 +43,16 @@
           with:
             node-version: ${{ matrix.node-version }}
             registry-url: https://npm.pkg.github.com
+            # Defaults to the user or organization that owns the workflow file
             scope: '@bedy90' # This is the real owner name in the actual file.
-            # registry-url: https://registry.npmjs.org/
             
         - name: Install Typescript
           run: npm install typescript@5.3.3 -g
           
         - name: Install dependencies
+          run: npm ci
           env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: npm ci
     
         - name: Run Test Coverage
           run: npm run test:ts_json_coverage 
